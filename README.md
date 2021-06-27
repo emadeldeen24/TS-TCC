@@ -3,7 +3,7 @@
 #### *by: Emadeldeen Eldele, Mohamed Ragab, Zhenghua Chen, Min Wu, Chee Keong Kwoh, Xiaoli Li and Cuntai Guan*
 
 ## Abstract
-![TS_TCC structure](misc/TS_TCC.png)
+<img src="misc/TS_TCC.png" width="500">
 Learning decent representations from unlabeled time-series data with temporal dynamics is a very challenging task. 
 In this paper, we propose an unsupervised <b>T</b>ime-<b>S</b>eries representation learning framework via <b>T</b>emporal and <b>C</b>ontextual <b>C</b>ontrasting 
 (<b>TS-TCC</b>), to learn time-series representation from unlabeled data. 
