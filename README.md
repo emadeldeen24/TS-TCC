@@ -6,7 +6,7 @@
 ![TS_TCC structure](misc/TS_TCC.png)
 Learning decent representations from unlabeled time-series data with temporal dynamics is a very challenging task. 
 In this paper, we propose an unsupervised <b>T</b>ime-<b>S</b>eries representation learning framework via <b>T</b>emporal and <b>C</b>ontextual <b>C</b>ontrasting 
-(<b>TS-TCC</b>}), to learn time-series representation from unlabeled data. 
+(<b>TS-TCC</b>), to learn time-series representation from unlabeled data. 
 First, the raw time-series data are transformed into two different yet correlated views by using weak and strong augmentations. 
 Second, we propose a novel temporal contrasting module to learn <i>robust</i> temporal representations by designing a tough cross-view prediction task. 
 Last, to further learn <i>discriminative</i> representations, we propose a contextual contrasting module built upon the 
