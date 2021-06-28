@@ -77,3 +77,10 @@ The same applies for `SS_LC.sh` to run self-supervised training followed by line
 ## Results
 - The experiments are saved in "experiments_logs" directory by default (you can change that from args too).
 - Each experiment will have a log file and a final classification report in case of modes other that "self-supervised".
+
+
+## Contact
+Emadeldeen Eldele
+School of Computer Science and Engineering (SCSE)   
+Nanyang Technological University, Singapore   
+Email: emad0002{at}e.ntu.edu.sg   
