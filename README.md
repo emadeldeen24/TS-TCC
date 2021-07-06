@@ -67,12 +67,7 @@ Note that the name of the dataset should be the same name as inside the "data" f
 the same as the ones above.
 
 To train the model for the `fine_tune` and `train_linear` modes, you have to run `self_supervised` first.
-To do that, you would better use `SS_FT.sh` file to run self-supervised training followed by fine-tuning.
-```
-chmod +x SS_FT.sh
-./SS_FT.sh Exp1 run_1 123 HAR cuda
-```
-The same applies for `SS_LC.sh` to run self-supervised training followed by linear classifier training.
+
 
 ## Results
 - The experiments are saved in "experiments_logs" directory by default (you can change that from args too).
