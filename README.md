@@ -23,25 +23,41 @@ comparably with the supervised training. Additionally, our proposed TS-TCC shows
 - Sklearn
 - Pandas
 - openpyxl (for classification reports)
-- mne (For Sleep-EDF preprocessing)
-
+- mne=='0.20.7' (For Sleep-EDF preprocessing)
+- mat4py (for Fault diagnosis preprocessing)
 ## Datasets
 ### Download datasets
 We used four public datasets in this study:
-- [Sleep-EDF](https://physionet.org/content/sleep-edfx/1.0.0/)
+- [Sleep-EDF](https://gist.github.com/emadeldeen24/a22691e36759934e53984289a94cb09b)
 - [HAR](https://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)  
 - [Epilepsy](https://archive.ics.uci.edu/ml/datasets/Epileptic+Seizure+Recognition)
 - [Fault Diagnosis](https://mb.uni-paderborn.de/en/kat/main-research/datacenter/bearing-datacenter/data-sets-and-download)
 
 ### Preparing datasets
-After downloading the datasets, you can prepare them using preprocessing codes.
-
 The data should be in a separate folder called "data" inside the project folder.
-
 Inside that folder, you should have a separate folders; one for each dataset. Each subfolder should have "train.pt", "val.pt" and "test.pt" files.
-
 The structure of data files should in dictionary form as follows:
 `train.pt = {"samples": data, "labels: labels}`, and similarly `val.pt`, and `test.pt`
+
+The details of preprocessing is as follows:
+#### 1- Sleep-EDF dataset:
+Create a folder named `data_files` in the path `data_preprocessing/sleep-edf/`.
+Download the dataset files and place them in this folder. 
+
+Run the script `preprocess_sleep_edf.py` to generate the numpy files ... you will find the numpy files of 
+each PSG file in another folder named `sleepEDF20_fpzcz` (you can change these names from args).
+You will also find the data of each subject in the folder `sleepEDF20_fpzcz_subjects` (since each subject has two-night data)
+
+Finally run the file `generate_train_val_test.py` to generate the files and it will automatically place
+them in the `data/sleepEDF` folder.
+
+#### 2- UCI HAR dataset
+When you dowload the dataset and extract the zip file, you will find the data in a folder named
+`UCI HAR Dataset` ... place it in `data_preprocessing/uci_har/` folder and run `preprocess_har.py` file.
+
+#### 3- Epilepsy and Fault diagnosis datasets:
+download the data file in `data_files` folder and run the preprocessing scripts.
+
 
 ### Configurations
 The configuration files in the `config_files` folder should have the same name as the dataset folder name.
