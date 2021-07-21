@@ -56,11 +56,58 @@ ann2label = {
 EPOCH_SEC_SIZE = 30
 
 
+def combine_to_subjects(root_dir, output_dir):
+    sampling_rate = 100.
+    files = os.listdir(root_dir)
+    files = [os.path.join(root_dir, i) for i in files]
+
+    files_dict = {}
+
+    for i in files:
+        file_name = i.split(os.sep)[-1]
+        file_num = file_name[3:5]
+        if file_num not in files_dict:
+            files_dict[file_num] = [i]
+        else:
+            files_dict[file_num].append(i)
+
+    os.makedirs(output_dir, exist_ok=True)
+    for i in files_dict:
+        if len(files_dict[i]) == 2:
+            x1 = np.load(files_dict[i][0])["x"]
+            x2 = np.load(files_dict[i][1])["x"]
+            new_x = np.concatenate((x1, x2), axis=0)
+
+            y1 = np.load(files_dict[i][0])["y"].tolist()
+            y2 = np.load(files_dict[i][1])["y"].tolist()
+            y1.extend(y2)
+            y1 = np.array(y1)
+            print(new_x.shape, y1.shape)
+        else:
+            new_x = np.load(files_dict[i][0])["x"]
+            y1 = np.load(files_dict[i][0])["y"]
+            print(new_x.shape, y1.shape)
+
+        # Saving as numpy files
+        # print(file, x_values.shape[0], y_values.shape[0])
+        filename = "subject_" + str(i) + ".npz"
+        save_dict = {
+            "x": new_x,
+            "y": y1,
+            "fs": sampling_rate
+        }
+        np.savez(os.path.join(output_dir, filename), **save_dict)
+        print(" ---------- Combining files to subjects is done ---------")
+
+
+
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--data_dir", type=str, default="data_edf_20",
+    parser.add_argument("--data_dir", type=str, default="data_files",
                         help="File path to the PSG and annotation files.")
-    parser.add_argument("--output_dir", type=str, default="data_edf_20_npz/fpzcz",
+    parser.add_argument("--output_dir", type=str, default="sleepEDF20_fpzcz",
+                        help="Directory where to save numpy files outputs.")
+    parser.add_argument("--subjects_output_dir", type=str, default="sleepEDF20_fpzcz_subjects",
                         help="Directory where to save numpy files outputs.")
     parser.add_argument("--select_ch", type=str, default="EEG Fpz-Cz",
                         help="The selected channel")
@@ -138,7 +185,7 @@ def main():
                 print ("Remove onset:{}, duration:{}, label:{} ({})".format(
                     onset_sec, duration_sec, label, ann_str))
         labels = np.hstack(labels)
-        
+
         print ("before remove unwanted: {}".format(np.arange(len(raw_ch_df)).shape))
         if len(remove_idx) > 0:
             remove_idx = np.hstack(remove_idx)
@@ -197,8 +244,8 @@ def main():
         # Save
         filename = ntpath.basename(psg_fnames[i]).replace("-PSG.edf", ".npz")
         save_dict = {
-            "x": x, 
-            "y": y, 
+            "x": x,
+            "y": y,
             "fs": sampling_rate,
             "ch_label": select_ch,
             "header_raw": h_raw,
@@ -207,6 +254,8 @@ def main():
         np.savez(os.path.join(args.output_dir, filename), **save_dict)
 
         print ("\n=======================================\n")
+
+    combine_to_subjects(args.output_dir, args.subjects_output_dir)
 
 
 if __name__ == "__main__":
