@@ -45,7 +45,7 @@ y_test -= np.min(y_test)
 X_train, X_val, y_train, y_val = train_test_split(train_data, train_labels, test_size=0.2, random_state=42)
 
 dat_dict = dict()
-dat_dict["samples"] = torch.from_numpy(train_data)
+dat_dict["samples"] = torch.from_numpy(X_train)
 dat_dict["labels"] = torch.from_numpy(y_train)
 torch.save(dat_dict, os.path.join(output_dir, "train.pt"))
 
