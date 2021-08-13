@@ -1,4 +1,4 @@
-# Time-Series Representation Learning via Temporal and Contextual Contrasting (TS-TCC)
+# Time-Series Representation Learning via Temporal and Contextual Contrasting (TS-TCC) [[Arxiv](https://arxiv.org/pdf/2106.14112.pdf)]
 #### *by: Emadeldeen Eldele, Mohamed Ragab, Zhenghua Chen, Min Wu, Chee Keong Kwoh, Xiaoli Li and Cuntai Guan*
 #### This work is accepted for publication in the International Joint Conferences on Artificial Intelligence (IJCAI-21) (Acceptance Rate: 13.9%).
 
