@@ -95,16 +95,9 @@ If you found this work useful for you, please consider citing it.
 @inproceedings{ijcai2021-324,
   title     = {Time-Series Representation Learning via Temporal and Contextual Contrasting},
   author    = {Eldele, Emadeldeen and Ragab, Mohamed and Chen, Zhenghua and Wu, Min and Kwoh, Chee Keong and Li, Xiaoli and Guan, Cuntai},
-  booktitle = {Proceedings of the Thirtieth International Joint Conference on
-               Artificial Intelligence, {IJCAI-21}},
-  publisher = {International Joint Conferences on Artificial Intelligence Organization},
-  editor    = {Zhi-Hua Zhou},
+  booktitle = {Proceedings of the Thirtieth International Joint Conference on Artificial Intelligence, {IJCAI-21}},
   pages     = {2352--2359},
   year      = {2021},
-  month     = {8},
-  note      = {Main Track}
-  doi       = {10.24963/ijcai.2021/324},
-  url       = {https://doi.org/10.24963/ijcai.2021/324},
 }
 ```
 
