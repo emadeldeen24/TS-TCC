@@ -1,4 +1,4 @@
-# Time-Series Representation Learning via Temporal and Contextual Contrasting (TS-TCC) [[Arxiv](https://arxiv.org/pdf/2106.14112.pdf)]
+# Time-Series Representation Learning via Temporal and Contextual Contrasting (TS-TCC) [[Paper](https://www.ijcai.org/proceedings/2021/0324.pdf)]
 #### *by: Emadeldeen Eldele, Mohamed Ragab, Zhenghua Chen, Min Wu, Chee Keong Kwoh, Xiaoli Li and Cuntai Guan*
 #### This work is accepted for publication in the International Joint Conferences on Artificial Intelligence (IJCAI-21) (Acceptance Rate: 13.9%).
 
@@ -89,6 +89,24 @@ To train the model for the `fine_tune` and `train_linear` modes, you have to run
 - The experiments are saved in "experiments_logs" directory by default (you can change that from args too).
 - Each experiment will have a log file and a final classification report in case of modes other that "self-supervised".
 
+## Citation
+If you found this work useful for you, please consider citing it.
+```
+@inproceedings{ijcai2021-324,
+  title     = {Time-Series Representation Learning via Temporal and Contextual Contrasting},
+  author    = {Eldele, Emadeldeen and Ragab, Mohamed and Chen, Zhenghua and Wu, Min and Kwoh, Chee Keong and Li, Xiaoli and Guan, Cuntai},
+  booktitle = {Proceedings of the Thirtieth International Joint Conference on
+               Artificial Intelligence, {IJCAI-21}},
+  publisher = {International Joint Conferences on Artificial Intelligence Organization},
+  editor    = {Zhi-Hua Zhou},
+  pages     = {2352--2359},
+  year      = {2021},
+  month     = {8},
+  note      = {Main Track}
+  doi       = {10.24963/ijcai.2021/324},
+  url       = {https://doi.org/10.24963/ijcai.2021/324},
+}
+```
 
 ## Contact
 Emadeldeen Eldele
