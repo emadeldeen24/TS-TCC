@@ -49,9 +49,9 @@ def model_train(model, temporal_contr_model, model_optimizer, temp_cont_optimize
     model.train()
     temporal_contr_model.train()
 
-    for batch_idx, (data, target, aug1, aug2) in enumerate(train_loader):
+    for batch_idx, (data, labels, aug1, aug2) in enumerate(train_loader):
         # send to device
-        data, target = data.float().to(device), target.long().to(device)
+        data, labels = data.float().to(device), labels.long().to(device)
         aug1, aug2 = aug1.float().to(device), aug2.float().to(device)
 
         # optimizer
@@ -86,8 +86,8 @@ def model_train(model, temporal_contr_model, model_optimizer, temp_cont_optimize
             
         else: # supervised training or fine tuining
             predictions, features = output
-            loss = criterion(predictions, target)
-            total_acc.append(target.eq(predictions.detach().argmax(dim=1)).float().mean())
+            loss = criterion(predictions, labels)
+            total_acc.append(labels.eq(predictions.detach().argmax(dim=1)).float().mean())
 
         total_loss.append(loss.item())
         loss.backward()
@@ -115,8 +115,8 @@ def model_evaluate(model, temporal_contr_model, test_dl, device, training_mode):
     trgs = np.array([])
 
     with torch.no_grad():
-        for data, target, _, _ in test_dl:
-            data, target = data.float().to(device), target.long().to(device)
+        for data, labels, _, _ in test_dl:
+            data, labels = data.float().to(device), labels.long().to(device)
 
             if training_mode == "self_supervised":
                 pass
@@ -126,14 +126,14 @@ def model_evaluate(model, temporal_contr_model, test_dl, device, training_mode):
             # compute loss
             if training_mode != "self_supervised":
                 predictions, features = output
-                loss = criterion(predictions, target)
-                total_acc.append(target.eq(predictions.detach().argmax(dim=1)).float().mean())
+                loss = criterion(predictions, labels)
+                total_acc.append(labels.eq(predictions.detach().argmax(dim=1)).float().mean())
                 total_loss.append(loss.item())
 
             if training_mode != "self_supervised":
                 pred = predictions.max(1, keepdim=True)[1]  # get the index of the max log-probability
                 outs = np.append(outs, pred.cpu().numpy())
-                trgs = np.append(trgs, target.data.cpu().numpy())
+                trgs = np.append(trgs, labels.data.cpu().numpy())
 
     if training_mode != "self_supervised":
         total_loss = torch.tensor(total_loss).mean()  # average loss
