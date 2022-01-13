@@ -8,8 +8,7 @@ files = os.listdir(data_dir)
 files = np.array([os.path.join(data_dir, i) for i in files])
 files.sort()
 
-edf20_permutation = np.array([0,1,2,3])
-    # [14, 5, 4, 17, 8, 7, 19, 12, 0, 15, 16, 9, 11, 10, 3, 1, 6, 18, 2, 13])  # to have the same results as in the paper
+edf20_permutation = np.array([14, 5, 4, 17, 8, 7, 19, 12, 0, 15, 16, 9, 11, 10, 3, 1, 6, 18, 2, 13])  # to have the same results as in the paper
 
 files = files[edf20_permutation]
 
