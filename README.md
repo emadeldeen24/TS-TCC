@@ -27,6 +27,8 @@ comparably with the supervised training. Additionally, our proposed TS-TCC shows
 - mat4py (for Fault diagnosis preprocessing)
 ## Datasets
 ### Download datasets
+> `Update:` You can now find the preprocessed datasets [on this Dataverse](https://researchdata.ntu.edu.sg/dataverse/tstcc/)
+
 We used four public datasets in this study:
 - [Sleep-EDF](https://gist.github.com/emadeldeen24/a22691e36759934e53984289a94cb09b)
 - [HAR](https://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)  
