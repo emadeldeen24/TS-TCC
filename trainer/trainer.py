@@ -84,7 +84,7 @@ def model_train(model, temporal_contr_model, model_optimizer, temp_cont_optimize
                                            config.Context_Cont.use_cosine_similarity)
             loss = (temp_cont_loss1 + temp_cont_loss2) * lambda1 +  nt_xent_criterion(zis, zjs) * lambda2
             
-        else: # supervised training or fine tuining
+        else: # supervised training or fine tuning
             predictions, features = output
             loss = criterion(predictions, labels)
             total_acc.append(labels.eq(predictions.detach().argmax(dim=1)).float().mean())
