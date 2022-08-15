@@ -3,17 +3,11 @@
 #### This work is accepted for publication in the International Joint Conferences on Artificial Intelligence (IJCAI-21) (Acceptance Rate: 13.9%).
 
 ## Abstract
-<img src="misc/TS_TCC.png" width="500">
-Learning decent representations from unlabeled time-series data with temporal dynamics is a very challenging task. 
-In this paper, we propose an unsupervised <b>T</b>ime-<b>S</b>eries representation learning framework via <b>T</b>emporal and <b>C</b>ontextual <b>C</b>ontrasting 
-(<b>TS-TCC</b>), to learn time-series representation from unlabeled data. 
-First, the raw time-series data are transformed into two different yet correlated views by using weak and strong augmentations. 
-Second, we propose a novel temporal contrasting module to learn <i>robust</i> temporal representations by designing a tough cross-view prediction task. 
-Last, to further learn <i>discriminative</i> representations, we propose a contextual contrasting module built upon the 
-contexts from the temporal contrasting module. It attempts to maximize the similarity among different contexts of the same sample while minimizing 
-similarity among contexts of different samples. Experiments have been carried out on three real-world time-series datasets. 
-The results manifest that training a linear classifier on top of the features learned by our proposed TS-TCC performs 
-comparably with the supervised training. Additionally, our proposed TS-TCC shows high efficiency in few-labeled data and transfer learning scenarios. 
+<p align="center">
+<img src="misc/TS_TCC.png" width="400" class="center">
+</p>
+
+Learning decent representations from unlabeled time-series data with temporal dynamics is a very challenging task. In this paper, we propose an unsupervised <b>T</b>ime-<b>S</b>eries representation learning framework via <b>T</b>emporal and <b>C</b>ontextual <b>C</b>ontrasting (<b>TS-TCC</b>), to learn time-series representation from unlabeled data. First, the raw time-series data are transformed into two different yet correlated views by using weak and strong augmentations. Second, we propose a novel temporal contrasting module to learn <i>robust</i> temporal representations by designing a tough cross-view prediction task. Last, to further learn <i>discriminative</i> representations, we propose a contextual contrasting module built upon the contexts from the temporal contrasting module. It attempts to maximize the similarity among different contexts of the same sample while minimizing similarity among contexts of different samples. Experiments have been carried out on three real-world time-series datasets. The results manifest that training a linear classifier on top of the features learned by our proposed TS-TCC performs comparably with the supervised training. Additionally, our proposed TS-TCC shows high efficiency in few-labeled data and transfer learning scenarios. 
 
 
 ## Requirmenets:
