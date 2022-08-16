@@ -2,7 +2,7 @@
 #### *by: Emadeldeen Eldele, Mohamed Ragab, Zhenghua Chen, Min Wu, Chee Keong Kwoh, Xiaoli Li and Cuntai Guan*
 #### This work is accepted for publication in the International Joint Conferences on Artificial Intelligence (IJCAI-21) (Acceptance Rate: 13.9%).
 
-### :boom::boom: *Update:* We have extended our method to the semi-supervised settings. Please refer to our paper [Self-supervised Contrastive Representation Learning for Semi-supervised Time-Series Classification]() for more details. We will release its code soon. :boom::boom:
+### :boom::boom: *Update:* We have extended our method to the semi-supervised settings. Please refer to our paper [Self-supervised Contrastive Representation Learning for Semi-supervised Time-Series Classification](http://arxiv.org/abs/2208.06616) for more details. We will release its code soon. :boom::boom:
 
 
 ## Abstract
