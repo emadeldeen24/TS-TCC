@@ -99,6 +99,14 @@ If you found this work useful for you, please consider citing it.
   year      = {2021},
 }
 ```
+```
+@article{emadeldeen2022catcc,
+  title   = {Self-supervised Contrastive Representation Learning for Semi-supervised Time-Series Classification},
+  author  = {Eldele, Emadeldeen and Ragab, Mohamed and Chen, Zhenghua and Wu, Min and Kwoh, Chee Keong and Li, Xiaoli and Guan, Cuntai},
+  journal = {arXiv preprint arXiv:2208.06616},
+  year    = {2022}
+}
+```
 
 ## Contact
 For any issues/questions regarding the paper or reproducing the results, please contact me.   
