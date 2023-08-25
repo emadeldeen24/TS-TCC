@@ -3,7 +3,7 @@
 #### This work is accepted for publication in the International Joint Conferences on Artificial Intelligence (IJCAI-21) (Acceptance Rate: 13.9%).
 
 ## :boom::boom: *Update:* We extended our method to the semi-supervised settings (CA-TCC). Please refer to the manuscript [Self-supervised Contrastive Representation Learning for Semi-supervised Time-Series Classification](http://arxiv.org/abs/2208.06616) for more details. [The code is also publicly available](https://github.com/emadeldeen24/CA-TCC). :boom::boom:
-
+## :boom::boom: Update 2: The extension CA-TCC has been accepted in the IEEE Transactions on Pattern Analysis and Machine Intelligence (**TPAMI**) :boom::boom:
 
 ## Abstract
 <p align="center">
