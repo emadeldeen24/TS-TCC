@@ -5,7 +5,8 @@ import torch
 from sklearn.preprocessing import MinMaxScaler
 
 data = pd.read_csv("data_files/data.csv")
-output_dir = r"../../data/epilepsy"
+# output_dir = r"../../data/epilepsy"
+output_dir = "/Workspace/Repos/fguo@cmtelematics.com/TS-TCC/data/Epilepsy"
 
 y = data.iloc[:, -1]
 x = data.iloc[:, 1:-1]

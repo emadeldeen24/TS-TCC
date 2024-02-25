@@ -1,0 +1,6 @@
+einops==0.7.0
+mat4py==0.6.0
+mne==0.20.7
+openpyxl==3.1.2
+torch==2.0.1+cpu
+torchvision==0.15.2+cpu
